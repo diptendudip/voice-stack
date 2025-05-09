@@ -1,5 +1,5 @@
 # Base image with FreeSWITCH
-FROM signalwire/freeswitch:1.10.10
+FROM signalwire/freeswitch-centos7:latest
 
 # Install Node.js and Piper
 RUN apk add --no-cache nodejs npm curl && \

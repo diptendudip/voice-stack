@@ -1,5 +1,5 @@
 # Base image with FreeSWITCH
-FROM ghcr.io/signalwire/freeswitch:latest
+FROM safarov/freeswitch:latest
 
 # Install Node.js and Piper
 RUN apk add --no-cache nodejs npm curl && \

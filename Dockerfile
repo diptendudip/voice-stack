@@ -2,7 +2,8 @@
 FROM safarov/freeswitch:latest
 
 # Install Node.js and Piper
-RUN apk add --no-cache nodejs npm curl && \
+RUN apt-get update && \
+    apt-get install -y nodejs npm curl wget && \
     curl -L https://github.com/rhasspy/piper/releases/download/2025.02.0/piper_amd64 \
         -o /usr/local/bin/piper && chmod +x /usr/local/bin/piper && \
     mkdir -p /opt/piper/voices && \
